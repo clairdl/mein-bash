@@ -2,8 +2,6 @@
 
 ## Usage
 **bash**
-
-make bash scripts executable with:
 ```sh
 $ chmod u+x /path/to/script.sh
 ```
@@ -12,13 +10,16 @@ $ chmod u+x /path/to/script.sh
 
 if you don't have go installed, get it [here](https://golang.org/doc/install), or run `brew install golang`
 
-build the binary and run it:
+build & run the binary:
 ```sh
 $ go build /path/to/script.go
 
 $ .path/to/script
 ```
 
-## Notes
 
-- `pdfexpert_trial_reset.sh` was written to abuse PDF Expert's free trial, but i found a better app for PDFs anyways (free, no trial): https://pdf.wondershare.com/
+### audio-notify
+plays a small audio notification after every given time interval
+
+### pdfexpert_trial_reset
+removes all config files and cached state and resets PDF Expert's free trial, but i ended up finding a better pdf reader anyways: https://pdf.wondershare.com/
