@@ -1,5 +1,4 @@
-# bash-scripts
-some tiny scripts and cli apps that i could be of value to someone out there :)
+# tiny-scripts
 
 ## Usage
 **bash**
@@ -19,3 +18,7 @@ $ go build /path/to/script.go
 
 $ .path/to/script
 ```
+
+## Notes
+
+- `pdfexpert_trial_reset.sh` was written to abuse PDF Expert's free trial, but i found a better app for PDFs anyways (free, no trial): https://pdf.wondershare.com/
