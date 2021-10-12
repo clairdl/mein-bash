@@ -35,15 +35,17 @@ func main() {
 
 	speaker.Init(format.SampleRate, format.SampleRate.N(time.Second/10))
 
+	buffer := beep.NewBuffer(format)
+	buffer.Append(streamer)
+	streamer.Close()
+
 	go func() {
 		for {
 			select {
 			case <-ticker.C:
 				fmt.Println("play")
-
-				speaker.Play(beep.Seq(streamer), beep.Callback(func() {
-					streamer.Seek(0)
-				}))
+				shot := buffer.Streamer(0, buffer.Len())
+				speaker.Play(shot)
 			}
 
 		}
